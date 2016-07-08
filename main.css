@@ -1,0 +1,42 @@
+/*rebelsites.unlv.edu/~lej6*/
+
+* {
+	font-family: "Lucida Sans Unicode", Verdana, Arial;
+	font-size: 16px;
+}
+
+p {
+	margin: 0px;
+}
+
+.card {
+	margin-top: 0px;
+	margin-left: 40px;
+}
+
+.pics {
+	position: fixed;
+	top: 40px;
+}
+
+.intro {
+	max-width: 600px;
+}
+
+.hi {
+	font-size: 48px;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+
+
+a:link {
+	color: rgba(0, 0, 0, .75);
+}
+
+a:visited {
+	color: rgba(0, 0, 0, .75);
+}
