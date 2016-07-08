@@ -1,42 +1,35 @@
-/*rebelsites.unlv.edu/~lej6*/
-
 * {
-	font-family: "Lucida Sans Unicode", Verdana, Arial;
-	font-size: 16px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 16px;
 }
 
 p {
-	margin: 0px;
+    margin: 8px;
 }
 
 .card {
-	margin-top: 0px;
-	margin-left: 40px;
+    margin-top: 0px;
+    margin-left: 40px;
+    max-width: 480px;
 }
 
 .pics {
-	position: fixed;
-	top: 40px;
-}
-
-.intro {
-	max-width: 600px;
+    position: fixed;
+    top: 40px;
 }
 
 .hi {
-	font-size: 48px;
+    font-size: 48px;
 }
 
 ul {
-	list-style-type: circle;
+    list-style-type: circle;
 }
 
-
-
 a:link {
-	color: rgba(0, 0, 0, .75);
+    color: rgba(0, 0, 0, .75);
 }
 
 a:visited {
-	color: rgba(0, 0, 0, .75);
+    color: rgba(0, 0, 0, .75);
 }
