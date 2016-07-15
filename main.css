@@ -9,13 +9,8 @@ p {
 
 .card {
     margin-top: 0px;
-    margin-left: 40px;
     max-width: 480px;
-}
-
-.pics {
-    position: fixed;
-    top: 40px;
+    padding-right: 32px;
 }
 
 .hi {
@@ -26,10 +21,45 @@ ul {
     list-style-type: circle;
 }
 
+#portrait {
+    border-radius: 32px;
+}
+
+/* Colors */
+
+body {
+    background-color: rgb(32, 32, 48);
+    color: black;
+}
+
+table {
+    background-color: rgb(255, 255, 255);
+    margin: 32px;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+td {
+    vertical-align: top;
+}
+
 a:link {
     color: rgba(0, 0, 255, .75);
 }
 
 a:visited {
-    color: rgba(128, 0, 128, .75);
+    color: rgba(0, 0, 255, .75);
 }
+
+/*Colors for white background*/
+/*
+ 
+a:link {
+    color: rgb(191, 191, 255);
+}
+
+a:visited {
+    color: rgb(191, 191, 255);
+}
+
+*/
