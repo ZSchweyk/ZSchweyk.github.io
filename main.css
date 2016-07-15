@@ -22,7 +22,7 @@ ul {
 }
 
 #portrait {
-    border-radius: 32px;
+    border-radius: 16px;
 }
 
 /* Colors */
@@ -36,7 +36,7 @@ table {
     background-color: rgb(255, 255, 255);
     margin: 32px;
     padding: 32px;
-    border-radius: 32px;
+    border-radius: 16px;
 }
 
 td {
