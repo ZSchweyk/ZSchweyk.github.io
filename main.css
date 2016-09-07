@@ -45,6 +45,13 @@ table {
     border-radius: 16px;
 }
 
+#hours {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 32px;
+    margin-top: -8px;
+}
+
 td {
     vertical-align: top;
 }
