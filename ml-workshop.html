@@ -28,30 +28,41 @@
     <p>In this workshop, we'll discuss the concepts and mathematics that underlie these machine learning techniques, as well as the Python libraries that enable us to efficiently apply them in practice. Requiring only a basic familiarity with calculus and programming, the workshop will introduce common challenges in designing, characterizing, and applying machine learning methods with the goal of extracting insights from data.</p>
     <br>
     <p><b>Schedule</b></p>
-    <p>Features and representation</p>
+    <p>Introduction</p>
     <ul>
-        <li>Feature extraction: the most essential step?</li>
-        <li>How features impact clustering: k-means versus Gaussian mixtures</li>
-        <li>Reducing dimensionality: linear versus nonlinear approaches</li>
-        <li>Deep learning: CNNs, long short-term memory, and the frontiers of hard intelligence</li>
+        <li>Making tradeoffs between models</li>
+        <li>A framework for applying machine learning</li>
+        <li>What's important in theory and in practice?</li>
     </ul>
     <p>Building flexible models and managing their complexity</p>
     <ul>
-        <li>Classification: support vector machines or logistic regression?</li>
+        <li>Classification: logistic regression, support vector machines, and decision trees</li>
+        <li>Overfitting, robustness, and generalizable models</li>
         <li>Ensembles: random forests and gradient-boosted machines</li>
-        <li>Regression: variations on the LASSO</li>
     </ul>
-    <p>Braving the wilderness of modern data</p>
+    <p>Performance metrics and model evaluation</p>
     <ul>
-        <li>Topic models for web data</li>
-        <li>Sequential models for real-time sensor data</li>
-        <li><i>Special Guest Speaker</i>: statistical models and computing in economics</li>
+        <li>Precision, recall, and the ROC curve</li> 
+        <li>Cross-validation</li> 
+        <li>Generalization error and data snooping</li>
+    </ul>
+    <p>Features and representation</p>
+    <ul>
+        <li>Visually exploring data</li>
+        <li>Constructing useful features</li>
+        <li>How features impact classification</li>
+        <li>Deep learning: CNNs, long short-term memory, and the frontiers of hard intelligence</li>
+    </ul>
+    <p>Applications to real-world data</p>
+    <ul>
+        <li>Mining text data: the 2016 U.S. Presidential Debate</li>
+        <li>Predicting customer satisfaction: Santander Bank</li>
+        <li>Detecting cancer cells</li>
     </ul>
     <p>Additional topics (as time permits)</p>
     <ul>
-        <li>An introduction to optimization: gradient methods and convergence analysis</li>
         <li>Preparing data: standardizing, normalizing, and imputation</li> 
-        <li>Selecting models by cross-validation</li> 
+        <li>An introduction to optimization: gradient methods and convergence analysis</li>
     </ul>
     <br>
     <p><b>Prerequisites</b></p>
@@ -68,8 +79,8 @@
       python-numpy-dev python-scipy libatlas-dev g++ python-matplotlib \
       ipython ipython-notebook
     </pre></code>
+    <p>Also, please install <a href="http://xgboost.readthedocs.io/en/latest/build.html">xgboost for Python</a> if you wish to run the examples for gradient boosting.</p>
     <p>If you use your own distro instead, we cannot offer any support if you encounter issues while executing our code.</p>
-
 </td>
 </table>
 </div>
