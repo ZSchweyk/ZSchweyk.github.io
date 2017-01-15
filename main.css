@@ -9,7 +9,7 @@ p {
 
 .card {
     margin-top: 0px;
-    max-width: 480px;
+    max-width: 360px;
     padding-right: 32px;
 }
 
@@ -29,6 +29,7 @@ ul {
 
 #portrait {
     border-radius: 8px;
+    height: 360px;
 }
 
 /* Colors */
@@ -41,8 +42,7 @@ body {
 
 table {
     background-color: rgb(255, 255, 255);
-    margin: 32px;
-    padding: 32px;
+    padding: 64px;
     border-radius: 8px;
     margin: 0 auto;
 }
@@ -56,6 +56,10 @@ table {
 
 td {
     vertical-align: top;
+}
+
+#pics {
+    text-align: right;
 }
 
 a:link {
