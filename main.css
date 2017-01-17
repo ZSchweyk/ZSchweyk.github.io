@@ -9,8 +9,13 @@ p {
 
 .card {
     margin-top: 0px;
-    max-width: 360px;
+    max-width: 480px;
     padding-right: 32px;
+}
+
+.heading {
+    font-weight: bold;
+    padding-top: 14px;
 }
 
 .course {
@@ -63,10 +68,12 @@ td {
 
 a:link {
     color: rgba(0, 0, 255, .75);
+    text-decoration: underline;
 }
 
 a:visited {
     color: rgba(0, 0, 255, .75);
+    text-decoration: underline;
 }
 
 /*Colors for white background*/
