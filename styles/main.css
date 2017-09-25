@@ -7,15 +7,20 @@ p {
     margin: 8px;
 }
 
+td {
+}
+
 .card {
     margin-top: 0px;
-    max-width: 480px;
+    max-width: 640px;
     padding-right: 32px;
 }
 
 .heading {
     font-weight: bold;
-    padding-top: 14px;
+    padding-top: 32px;
+    /* border-bottom: 2px solid rgba(135, 206, 235, 1); */
+    border-bottom: 2px solid rgba(174, 198, 207, 1);
 }
 
 .course {
@@ -42,19 +47,26 @@ li {
     height: 240px;
 }
 
+#pics {
+    /* border-left: 1px solid rgba(0, 0, 255, .75); */
+}
+
 /* Colors */
 
 body {
     /* background-color: rgb(32, 32, 48); */
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    /* background-color: rgba(135, 206, 235, 0.5); */
+    background-color: rgba(174, 198, 207, 1);
     color: black;
 }
 
 table {
-    background-color: rgb(255, 255, 255);
-    padding: 32px;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 8px;
     margin: 0 auto;
+    border-spacing: 32px;
 }
 
 #hours {
@@ -65,7 +77,10 @@ table {
 }
 
 td {
+    background-color: rgb(255, 255, 255);
     vertical-align: top;
+    border-radius: 8px;
+    padding: 32px;
 }
 
 #pics {
