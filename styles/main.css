@@ -70,11 +70,18 @@ table {
 }
 
 #hours {
+    margin: -64px;
+    margin-left: 32px;
+}
+
+/*
+#hours {
     margin: 0px;
     padding: 0px;
     margin-left: 32px;
     margin-top: -8px;
 }
+*/
 
 td {
     background-color: rgb(255, 255, 255);
