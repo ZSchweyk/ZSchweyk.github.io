@@ -1,5 +1,5 @@
 * {
-    font-family: "Nunito", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "Lora", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 14px;
 }
 
@@ -11,7 +11,6 @@ td {
 }
 
 .card {
-    margin-top: 0px;
     max-width: 960px;
     padding-right: 32px;
 }
@@ -43,7 +42,7 @@ li {
 }
 
 #portrait {
-    border-radius: 8px;
+    /* border-radius: 8px; */
     height: 240px;
 }
 
@@ -57,16 +56,19 @@ body {
     /* background-color: rgb(32, 32, 48); */
     /* background-color: rgb(255, 255, 255); */
     /* background-color: rgba(135, 206, 235, 0.5); */
-    background-color: rgba(174, 198, 207, 1);
+    /* background-color: rgba(174, 198, 207, 1); */
+    background-color: rgb(102, 255, 255);
+    background-image: url("../img/background.jpg");
     color: black;
 }
 
 table {
     /* background-color: rgb(255, 255, 255); */
     background-color: rgba(0, 0, 0, 0);
-    border-radius: 8px;
+    /* border-radius: 8px; */
     margin: 0 auto;
-    border-spacing: 32px;
+    border-spacing: 16px;
+    margin-top: -36px;
 }
 
 #hours {
@@ -86,21 +88,17 @@ table {
 td {
     background-color: rgb(255, 255, 255);
     vertical-align: top;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     padding: 32px;
 }
 
-#pics {
-    text-align: right;
-}
-
 a:link {
-    color: rgba(0, 0, 255, .75);
+    color: rgba(0, 0, 196, 0.8);
     text-decoration: underline;
 }
 
 a:visited {
-    color: rgba(0, 0, 255, .75);
+    color: rgba(0, 0, 196, 0.8);
     text-decoration: underline;
 }
 
