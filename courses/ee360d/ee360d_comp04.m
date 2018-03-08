@@ -66,11 +66,15 @@ t = 0:0.1:5;
 
 % Recall that r is a column vector (by convention).
 % The .' operator is non-conjugate transpose.
+% For a transfer function with no repeated poles,
+%   the inverse Laplace transform is a sum of exponential functions
+%   whose coefficients are r and whose arguments are p*t,
+%   where r and p are obtained from residue() above.
 % kron(p, t) generates a matrix where
-%   each row represents a value of s, and
+%   each row represents a value of p, and
 %   each column represents a value of t.
 % So, the following expression is the 
-%   inverse Laplace transform of H(s).
+%   inverse Laplace transform of the transfer function H(s).
 h = r.'*exp(kron(p, t));
 
 figure(4);
