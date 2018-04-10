@@ -101,16 +101,32 @@ body {
     /* background-color: rgba(135, 206, 235, 0.5); */
     /* background-color: rgba(174, 198, 207, 1); */
     /* background-color: rgb(255, 255, 255); */
-    background-image: url("../img/background4.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    /* background-image: url("../img/background4.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-position: top; */
+    /* -webkit-background-size: cover; */
+    /* -moz-background-size: cover; */
+    /* -o-background-size: cover; */
+    /* background-size: cover; */
     color: black;
     margin: 0px;
+}
+
+html::before {
+  content: ' ';
+  display: block;
+  background-image: url('../img/background4.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -10;
 }
 
 #hours {
