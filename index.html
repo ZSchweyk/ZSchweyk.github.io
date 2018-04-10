@@ -21,78 +21,79 @@
 </head>
 
 <body>
-<table>
-<td>
-    <img id="portrait" src="./img/IMG_7806.jpg">
+<div class="flex-parent">
+    <div class="sidebar flex-child">
+    <p class="hi">Justin Le</p>
+                <p class="heading-sidebar">Contact</p>
+                <p>lejustin.lv [at] gmail.com</p>
+                <!-- <img src="./img/email.png" height="20px"> -->
+                <p>Science & Engineering Building, Room 3219</p>
+                <p>University of Nevada, Las Vegas (UNLV)</p>
+                <p class="heading-sidebar">Curriculum Vitae</p>
+                <p><a href="./articles/cv.pdf">PDF</a>, December 2017.</p>
+                <p class="heading-sidebar">Links</p>
+                <p>
+                    <a href="https://www.linkedin.com/in/lejustinh"><img src="./img/linkedin_logo.png" height="24px"></a>
+                    <a href="https://github.com/Justin-Le"><img src="./img/github_logo.png" height="24px"></a>
+                    <a href="https://stackexchange.com/users/10667416/justin-le?tab=accounts"><img src="./img/stackoverflow_logo.svg" height="24px"></a>
+                    <!-- <a href="https://www.kaggle.com/lejustin"><img src="./img/kaggle_logo.png" height="24px"></a> -->
+                    <!-- <a href="https://www.quora.com/profile/Justin-Le-20"><img src="./img/quora_logo.png" height="24px"></a> -->
+                </p>
+    </div>
 
-    <p>
-        <img src="./img/email.png" height="20px">
-    </p>
+    <div class="card flex-child" id="main">
+        <div class="about">
+            <div class="portrait">
+                <img id="portrait" src="./img/portrait.png">
+            </div>
+            <div class="bio">
+                <p class="heading">Bio</p>
+                <p>
+                    I am an M.S. student in the <a href="http://ece.unlv.edu/">Department of Electrical Engineering</a> at the University of Nevada, Las Vegas (UNLV), under the advisement of <a href="https://faculty.unlv.edu/pushkin/">Prof. P. Kachroo</a>. I received the B.S. degree in electrical engineering from UNLV in 2016, with a minor in mathematics. I received the <a href="https://www.unlv.edu/news-story/2016-our-unlv-outstanding-undergraduate-scholar-award-winner-justin-le">Outstanding Undergraduate Research Award</a> at UNLV in 2016.
+                </p>
+                <p>
+                    In the fall of 2018, I will join the <a href="https://www.ccdc.ucsb.edu/">Center for Control, Dynamical Systems, and Computation (CCDC)</a> at the <a href="https://www.ucsb.edu/">University of California in Santa Barbara (UCSB)</a> as a Ph.D. student in Electrical & Computer Engineering.
+                </p>
+            </div>
+        </div>
 
-    <br>
-    <p><u>Curriculum Vitae</u></p>
-    <p><a href="./articles/cv.pdf">PDF</a>, December 2017.</p>
+                <p class="heading">Research</p>
 
-    <br>
-    <p><u>Location</u></p>
-    <p>Science & Engineering Building, Room 3219</p>
-    <p>University of Nevada, Las Vegas (UNLV)</p>
-    <p>4505 S. Maryland Parkway</p>
-    <p>Las Vegas, NV 89154</p>
+                <p>Thesis:</p>
+                <ul>
+                    <li><a href="./articles/ms_thesis.pdf">Fundamental tradeoffs in estimation of finite-state hidden Markov models</a>. M.S. thesis, Mar. 2018.</li>
+                </ul>
 
-    <br>
-    <p>
-    <a href="https://www.linkedin.com/in/lejustinh"><img src="./img/linkedin_logo.png" height="24px"></a>
-    <a href="https://github.com/Justin-Le"><img src="./img/github_logo.png" height="24px"></a>
-    <a href="https://stackexchange.com/users/10667416/justin-le?tab=accounts"><img src="./img/stackoverflow_logo.svg" height="24px"></a>
-    <!-- <a href="https://www.kaggle.com/lejustin"><img src="./img/kaggle_logo.png" height="24px"></a> -->
-    <!-- <a href="https://www.quora.com/profile/Justin-Le-20"><img src="./img/quora_logo.png" height="24px"></a> -->
-    </p>
-    
-</td>
+                <p>Conference Proceedings:</p>
+                <ul>
+                    <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-27857-5_61">A deep belief network for classifying remotely-sensed hyperspectral data</a>. International Symposium on Visual Computing (ISVC), Dec. 2015.</li>
+                </ul>
 
-<td>  
-    <div class="card" id="main">
-            <p class="hi">Justin Le</p>
-            <p>I am an M.S. student in the <a href="http://ece.unlv.edu/">Department of Electrical Engineering</a> at the University of Nevada, Las Vegas (UNLV), under the advisement of <a href="https://faculty.unlv.edu/pushkin/">Prof. P. Kachroo</a>. I received the B.S. degree in electrical engineering from UNLV in 2016, with a minor in mathematics. I received the <a href="https://www.unlv.edu/news-story/2016-our-unlv-outstanding-undergraduate-scholar-award-winner-justin-le">Outstanding Undergraduate Research Award</a> at UNLV in 2016.</p>
+                <p>Expository Notes:</p>
+                <ul>
+                    <li><a href="./articles/entropy_method.pdf">McDiarmid's inequality</a> via the entropy method.</li>
+                    <li><a href="./articles/variational_inference.pdf">Variational inference</a> for hidden Markov models.</li>
+                    <!-- <li><a href="./articles/riemann.pdf">Exercises</a> in Riemann integrability.</li> -->
+                    <!-- <li><a href="./articles/weyl.pdf">A primer for engineers</a> on developments in the physics of Weyl semimetals.</li> -->
+                </ul>
 
-            <p class="heading">Research</p>
+                <p>Talks:</p>
+                <ul>
+                    <li><a href="./talks/pde-seminar">The geometry of signal recovery</a>. November 2017. Seminar on Partial Differential Equations, Dept. of Mathematical Sciences, UNLV.</li>
+                    <li><a href="./talks/ml-seminar">A technical introduction to machine learning</a>. October 2016. Howard R. Hughes College of Engineering, UNLV.</li>
+                    <li>A deep belief network for classifying remotely-sensed hyperspectral data. December 2015. 11th International Conference on Visual Computing (ISVC). Las Vegas, Nevada.</li>
+                    <!-- <li><a href="./articles/riemann.pdf">Exercises</a> in Riemann integrability.</li> -->
+                    <!-- <li><a href="./articles/weyl.pdf">A primer for engineers</a> on developments in the physics of Weyl semimetals.</li> -->
+                </ul>
 
-            <p>Thesis:</p>
-            <ul>
-                <li><a href="./articles/ms_thesis.pdf">Fundamental tradeoffs in estimation of finite-state hidden Markov models</a>. M.S. thesis, Mar. 2018.</li>
-            </ul>
-
-            <p>Conference Proceedings:</p>
-            <ul>
-                <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-27857-5_61">A deep belief network for classifying remotely-sensed hyperspectral data</a>. International Symposium on Visual Computing (ISVC), Dec. 2015.</li>
-            </ul>
-
-            <p>Expository Notes:</p>
-            <ul>
-                <li><a href="./articles/entropy_method.pdf">McDiarmid's inequality</a> via the entropy method.</li>
-                <li><a href="./articles/variational_inference.pdf">Variational inference</a> for hidden Markov models.</li>
-                <!-- <li><a href="./articles/riemann.pdf">Exercises</a> in Riemann integrability.</li> -->
-                <!-- <li><a href="./articles/weyl.pdf">A primer for engineers</a> on developments in the physics of Weyl semimetals.</li> -->
-            </ul>
-
-            <p>Talks:</p>
-            <ul>
-                <li><a href="./talks/pde-seminar">The geometry of signal recovery</a>. November 2017. Seminar on Partial Differential Equations, Dept. of Mathematical Sciences, UNLV.</li>
-                <li><a href="./talks/ml-seminar">A technical introduction to machine learning</a>. October 2016. Howard R. Hughes College of Engineering, UNLV.</li>
-                <li>A deep belief network for classifying remotely-sensed hyperspectral data. December 2015. 11th International Conference on Visual Computing (ISVC). Las Vegas, Nevada.</li>
-                <!-- <li><a href="./articles/riemann.pdf">Exercises</a> in Riemann integrability.</li> -->
-                <!-- <li><a href="./articles/weyl.pdf">A primer for engineers</a> on developments in the physics of Weyl semimetals.</li> -->
-            </ul>
-
-            <p>Software:</p>
-            <ul>
-                <li><a href="https://github.com/Justin-Le/nonverbal-toolkit">Real-time classification of time series data</a>, in collaboration with the School of Medicine.</li>
-                <li><a href="https://github.com/Justin-Le/hyperspectral_classifier_DBN">Data processing tools for the Pavia hyperspectral dataset</a>.</li>
-                <li>An <a href="https://github.com/ded-sirius/public-assistant">app</a> for speech-control of Google Maps with Amazon Alexa/Echo.</li>
-                <!-- <li><a href="./articles/riemann.pdf">Exercises</a> in Riemann integrability.</li> -->
-                <!-- <li><a href="./articles/weyl.pdf">A primer for engineers</a> on developments in the physics of Weyl semimetals.</li> -->
-            </ul>
+                <p>Software:</p>
+                <ul>
+                    <li><a href="https://github.com/Justin-Le/nonverbal-toolkit">Real-time classification of time series data</a>, in collaboration with the School of Medicine.</li>
+                    <li><a href="https://github.com/Justin-Le/hyperspectral_classifier_DBN">Data processing tools for the Pavia hyperspectral dataset</a>.</li>
+                    <li>An <a href="https://github.com/ded-sirius/public-assistant">app</a> for speech-control of Google Maps with Amazon Alexa/Echo.</li>
+                    <!-- <li><a href="./articles/riemann.pdf">Exercises</a> in Riemann integrability.</li> -->
+                    <!-- <li><a href="./articles/weyl.pdf">A primer for engineers</a> on developments in the physics of Weyl semimetals.</li> -->
+                </ul>
 
             <p class="heading">Teaching</p>
             <p>Spring 2018:</p>
@@ -139,7 +140,6 @@
                 <li><a href="./articles/Le_EPSCoR.pdf">NASA work</a> on infrared video analysis.</li>
             </ul>
     </div>
-</td>
-</table>
+</div>
 </body>
 </html> 

@@ -7,19 +7,61 @@ p {
     margin: 8px;
 }
 
-td {
+.flex-parent {
+    display: flex;
+    /* flex-wrap: wrap-reverse; */
+}
+
+.flex-child {
+    vertical-align: top;
+}
+
+.sidebar {
+    margin-left: 32px;
+    position: fixed;
 }
 
 .card {
-    max-width: 960px;
+    margin-left: 400px;
+    padding-left: 32px;
     padding-right: 32px;
+    padding-bottom: 32px;
+    background-color: white;
+}
+
+.about {
+    display: flex;
+    padding-top: 8px;
+}
+
+.bio {
+    flex-basis: 40%;
+    margin-top: -32px;
+    padding-right: 32px;
+}
+
+.portrait{
+    flex-basis: 20%;
+}
+
+.contact {
+    background-color: white;
+    width: 240px;
+    border-radius: 8px;
 }
 
 .heading {
     font-weight: bold;
     padding-top: 32px;
     /* border-bottom: 2px solid rgba(135, 206, 235, 1); */
-    border-bottom: 2px solid rgba(174, 198, 207, 1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.heading-sidebar {
+    font-weight: bold;
+    padding-top: 32px;
+    /* border-bottom: 2px solid rgba(135, 206, 235, 1); */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .course {
@@ -30,7 +72,7 @@ td {
 }
 
 .hi {
-    font-size: 32px;
+    font-size: 36px;
 }
 
 ul {
@@ -43,7 +85,8 @@ li {
 
 #portrait {
     /* border-radius: 8px; */
-    height: 240px;
+    width: 240px;
+    border-radius: 8px;
 }
 
 #pics {
@@ -57,20 +100,17 @@ body {
     /* background-color: rgb(255, 255, 255); */
     /* background-color: rgba(135, 206, 235, 0.5); */
     /* background-color: rgba(174, 198, 207, 1); */
-    background-color: rgb(255, 255, 255);
-    /* background-image: url("../img/background.jpeg"); */
-    /* background-attachment: fixed; */
-    /* background-position: left bottom;  */
-    color: black;
-}
-
-table {
     /* background-color: rgb(255, 255, 255); */
-    background-color: rgba(0, 0, 0, 0);
-    /* border-radius: 8px; */
-    margin: 0 auto;
-    border-spacing: 16px;
-    margin-top: -36px;
+    background-image: url("../img/background4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: black;
+    margin: 0px;
 }
 
 #hours {
@@ -96,12 +136,12 @@ td {
 
 a:link {
     color: rgba(0, 0, 196, 0.8);
-    text-decoration: underline;
+    text-decoration: initial;
 }
 
 a:visited {
     color: rgba(0, 0, 196, 0.8);
-    text-decoration: underline;
+    text-decoration: initial;
 }
 
 /*Colors for white background*/
