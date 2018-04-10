@@ -27,6 +27,7 @@ p {
     padding-right: 32px;
     padding-bottom: 32px;
     background-color: white;
+    width: 100%;
 }
 
 .white-box {
@@ -46,7 +47,6 @@ p {
 }
 
 .float-text {
-    max-width: 75%;
 }
 
 .portrait{
@@ -136,14 +136,10 @@ html::before {
   content: ' ';
   display: block;
   background-image: url('../img/background4.jpg');
-  background-position: center;
+  background-position: top;
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   position: fixed;
   z-index: -10;
 }
