@@ -29,19 +29,34 @@ p {
     background-color: white;
 }
 
+.white-box {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
 .about {
-    display: flex;
     padding-top: 8px;
 }
 
 .bio {
-    flex-basis: 40%;
     margin-top: -32px;
     padding-right: 32px;
 }
 
+.float-text {
+    max-width: 75%;
+}
+
 .portrait{
-    flex-basis: 20%;
+    float: left;
+    margin-right: 32px;
+    margin-bottom: 8px;
+}
+
+.research {
+    clear: left;
 }
 
 .contact {
@@ -57,11 +72,14 @@ p {
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-.heading-sidebar {
+.heading-sidebar, .first-heading-sidebar{
     font-weight: bold;
-    padding-top: 32px;
     /* border-bottom: 2px solid rgba(135, 206, 235, 1); */
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.heading-sidebar {
+    padding-top: 32px;
 }
 
 .course {
@@ -86,6 +104,7 @@ li {
 #portrait {
     /* border-radius: 8px; */
     width: 240px;
+    height: 240px;
     border-radius: 8px;
 }
 
