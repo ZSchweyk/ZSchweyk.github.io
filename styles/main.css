@@ -1,8 +1,13 @@
+* {
+    font-family: "Lora", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 16px;
+}
+
 .wrapper { 
-  display: grid; 
+  display: grid;
   margin: auto;
-  width: 50%;
-  grid-template-columns: repeat(10, 1fr); 
+  width: 80%;
+  grid-template-columns: repeat(10, auto); 
   grid-template-rows: 50px 10px; 
   grid-column-gap: 50px;
   grid-row-gap: 10px;
@@ -33,7 +38,7 @@
   border-top: 2px solid gray;
 }
 
-.home { 
+.bio { 
   text-align: center;
   grid-column-start: 1; 
   grid-column-end: 3; 
@@ -90,8 +95,51 @@
   grid-row-start: 5; 
 }
 
-.wrapper-small {
+.wrapper-bio {
   display: grid;
-  grid-template-columns: 3fr 7fr; 
+  grid-template-columns: 2fr 8fr; 
   grid-column-gap: 20px;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+p.bold {
+  font-weight: bold;
+}
+
+.centered {
+  text-align: center;
+}
+
+.wrapper-teaching { 
+  display: grid;
+  margin: auto;
+  width: 80%;
+  grid-template-columns: repeat(10, auto); 
+  grid-template-rows: 10px 10px; 
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+} 
+
+.quarter-semester { 
+  grid-column-start: 1; 
+  grid-column-end: 6; 
+  grid-row-start: 1; 
+  grid-row-end: 3; 
+  text-align: right;
+}
+
+.course { 
+  grid-column-start: 6; 
+  grid-column-end: 11; 
+  grid-row-start: 1; 
+  grid-row-end: 3; 
+  text-align: left;
+}
+
+#portrait {
+  border-radius: 10px;
 }
