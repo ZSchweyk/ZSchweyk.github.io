@@ -1,6 +1,16 @@
 * {
-    font-family: "Lora", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: 'Exo', 'Play', 'Rajdhani', 'Quicksand', 'Philosopher', sans-serif;
     font-size: 16px;
+    color: #eee8d5;
+}
+
+body {
+    background-color: #00001a;     
+}
+
+img {
+    background-color: white;    
+    border-radius: 4px;
 }
 
 .wrapper { 
@@ -14,7 +24,8 @@
 } 
 
 .name { 
-  font-size: 40px;
+  /* font-weight: bold; */
+  font-size: 50px;
   grid-column-start: 1; 
   grid-column-end: 6; 
   grid-row-start: 1; 
@@ -35,7 +46,7 @@
   grid-column-end: 11; 
   grid-row-start: 3; 
   grid-row-end: 3; 
-  border-top: 2px solid gray;
+  border-top: 2px solid #191930;
 }
 
 .bio { 
@@ -85,7 +96,7 @@
   grid-column-end: 11; 
   grid-row-start: 5; 
   grid-row-end: 5; 
-  border-top: 2px solid gray;
+  border-top: 2px solid #191930;
 }
 
 .body { 
@@ -142,4 +153,12 @@ p.bold {
 
 #portrait {
   border-radius: 10px;
+}
+
+a {
+  color: cyan;
+  text-decoration: none;
+}
+
+a.nav {
 }
