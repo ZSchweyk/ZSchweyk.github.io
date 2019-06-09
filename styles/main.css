@@ -1,11 +1,10 @@
 * {
-    font-family: 'Exo', 'Play', 'Rajdhani', 'Quicksand', 'Philosopher', sans-serif;
-    font-size: 16px;
+    font-family: 'Quicksand', 'Exo', 'Play', 'Times New Roman';
     color: #eee8d5;
 }
 
 body {
-    background-color: #00001a;     
+    background-color: rgb(0, 6, 12);     
 }
 
 img {
@@ -41,12 +40,30 @@ img {
   text-align: left;
 }
 
+.contact-wrapper { 
+  display: grid;
+  margin: auto;
+  grid-template-columns: 60px auto; 
+} 
+
+.contact-fields { 
+  grid-column-start: 1; 
+  grid-column-end: 2; 
+  text-align: left;
+}
+
+.contact-values { 
+  grid-column-start: 2; 
+  grid-column-end: 3; 
+  text-align: left;
+}
+
 .divider1 { 
   grid-column-start: 1; 
   grid-column-end: 11; 
   grid-row-start: 3; 
   grid-row-end: 3; 
-  border-top: 2px solid #191930;
+  border-top: 2px solid rgb(0, 32, 64);
 }
 
 .bio { 
@@ -96,7 +113,7 @@ img {
   grid-column-end: 11; 
   grid-row-start: 5; 
   grid-row-end: 5; 
-  border-top: 2px solid #191930;
+  border-top: 2px solid rgb(0, 32, 64);
 }
 
 .body { 
@@ -156,9 +173,6 @@ p.bold {
 }
 
 a {
-  color: cyan;
+  color: rgb(126, 190, 255);
   text-decoration: none;
-}
-
-a.nav {
 }
