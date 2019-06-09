@@ -1,6 +1,6 @@
 * {
     font-family: 'Quicksand', 'Exo', 'Play', 'Times New Roman';
-    color: #eee8d5;
+    color: white;
 }
 
 body {
@@ -63,7 +63,7 @@ img {
   grid-column-end: 11; 
   grid-row-start: 3; 
   grid-row-end: 3; 
-  border-top: 2px solid rgb(0, 32, 64);
+  border-top: 2px solid rgb(128, 0, 0);
 }
 
 .bio { 
@@ -113,7 +113,7 @@ img {
   grid-column-end: 11; 
   grid-row-start: 5; 
   grid-row-end: 5; 
-  border-top: 2px solid rgb(0, 32, 64);
+  border-top: 2px solid rgb(128, 0, 0);
 }
 
 .body { 
