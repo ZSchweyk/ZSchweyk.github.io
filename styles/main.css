@@ -29,6 +29,7 @@ img {
   grid-row-start: 1; 
   grid-row-end: 3; 
   text-align: right;
+  margin-right: 25px;
 }
 
 .contact { 
@@ -37,6 +38,7 @@ img {
   grid-row-start: 1; 
   grid-row-end: 3; 
   text-align: left;
+  margin-left: 25px;
 }
 
 .contact-wrapper { 
