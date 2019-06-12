@@ -16,9 +16,8 @@ img {
   display: grid;
   margin: auto;
   width: 80%;
-  grid-template-columns: repeat(10, auto); 
-  grid-template-rows: 50px 10px; 
-  grid-column-gap: 50px;
+  grid-template-columns: repeat(10, 1fr); 
+  grid-template-rows: 50px 10px;
   grid-row-gap: 10px;
 } 
 
