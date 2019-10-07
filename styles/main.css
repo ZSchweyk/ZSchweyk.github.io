@@ -127,7 +127,7 @@ img {
 .wrapper-bio {
   display: grid;
   grid-template-columns: 2fr 8fr; 
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
 }
 
 li {
@@ -171,6 +171,9 @@ p.bold {
 
 #portrait {
   border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
