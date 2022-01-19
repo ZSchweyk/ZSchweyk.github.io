@@ -126,6 +126,11 @@ li {
   margin-bottom: 20px;
 }
 
+li.bulleted {
+  list-style-type: square;
+  margin-bottom: 20px;
+}
+
 p.bold {
   font-weight: bold;
 }
