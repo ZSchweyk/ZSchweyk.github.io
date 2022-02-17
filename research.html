@@ -38,103 +38,31 @@
   </div>
 
   <div class="divider1"></div>
-  <div class="bio"><a href="./index.html">Bio</a></div>
-  <div class="research"><a href="./research.html">Research</a></div>
-  <div class="publications"><a href="./publications.html">Publications</a></div>
-  <div class="software"><a href="./software.html">Software</a></div>
-  <div class="teaching"><a href="./teaching.html">Teaching</a></div>
+  <div class="bio"><a class="nav" href="./index.html">Bio</a></div>
+  <div class="research"><a class="nav" href="./research.html">Research</a></div>
+  <div class="publications"><a class="nav" href="./publications.html">Publications</a></div>
+  <!-- <div class="software"><a class="nav" href="./software.html">Software</a></div> -->
+  <div class="teaching"><a class="nav" href="./teaching.html">Teaching</a></div>
   <div class="divider2"></div>
   <div class="body">
   <br>
   <br>
+<p>My research broadly aims to develop new techniques for the <a href="https://en.wikipedia.org/wiki/Control_theory">design and analysis of control systems</a> that can achieve various notions of efficiency and robustness in electrical and mechanical engineering applications. The novelty of my work lies in its creative use of ideas from the <a href="https://en.wikipedia.org/wiki/Stability_theory">stability theory</a> of <a href="https://en.wikipedia.org/wiki/Nonlinear_system">nonlinear systems</a>, <a href="https://en.wikipedia.org/wiki/Hybrid_system">hybrid systems</a>, <a href="https://en.wikipedia.org/wiki/Differential_inclusion">differential inclusions</a>, and <a href="https://en.wikipedia.org/wiki/Linear_recurrence_with_constant_coefficients">difference equations</a>. So far, my work has offered new and practical perspectives on <a href="https://ieeexplore.ieee.org/document/8637145">reset control</a>, a topic that has been gaining popularity in recent years among researchers across several engineering disciplines.</p>
 
-I study nonconvex optimization problems, namely those that arise in: (1) the control of cyber-physical systems and (2) the fitting of predictive models. My research aims to develop new algorithms for solving these problems, as well as new mathematical tools for describing their effectiveness, efficiency, and robustness. I mainly work with techniques that lie at the intersection of dynamical systems, variational analysis, stochastic processes, and differential geometry/topology.
+<p>Reset control is a technique that augments traditional dynamic feedback controllers with a mechanism to adaptively and/or periodically "reset" the memory state in such a way as to improve transient closed-loop behaviors such as overshoot and settling time. Reset controllers have been shown to overcome inherent limitations in the phase lag properties of linear time-invariant controllers, including proportional-integral-derivative (PID) controllers. The benefits have been demonstrated in a wide variety of applications: industrial high-precision motion systems with unknown friction characteristics; longitudinal motion in a coordinated platoon of automatically cruising vehicles; exhaust gas recirculation valves; and electromechanical valves in power-split transmission systems.</p>
+
+<p>Despite their effectiveness for controlling linear systems, reset controllers have not been extensively applied to nonlinear systems, partly due to challenges in guaranteeing desirable properties regarding stability and robustness in this setting. One specific challenge lies in implementing a feature referred to as temporal regularization, which enforces a positive lower bound on the time elapsed between instances of resetting and has been shown to be essential for stability/robustness guarantees in reset control.</p> 
+
+<p>My research takes a step toward addressing these challenges by applying reset control to passive systems, which are (generally) nonlinear systems that commonly arise in vehicular and robotic applications, among other applications that involve nonlinear interactions between mechanical and/or electrical components. By exploiting the fact that these systems admit energy functions for stability analysis, I have developed a new type of reset controller referred to as a soft-reset controller, whose stability properties can be guaranteed by exploiting convexity of energy functions and without relying on temporal regularization. Specifically, it is shown in <a href="https://arxiv.org/abs/2104.11414">[Le, Teel 2021b]</a> that, if a reset controller admits a strongly convex energy function, there exists a soft-reset controller that approximates the behavior of the original reset controller while inheriting its stability and passivity properties, enabling the soft-reset controller to achieve desired closed-loop stability and passivity properties when placed in feedback with a passive nonlinear system. In the same publication, soft-reset control is demonstrated on some systems commonly studied in nonlinear control theory, including a robotic manipulator and a translational oscillator with a rotational actuator.</p>
+
+<p>In one of my earlier works <a href="https://arxiv.org/abs/2009.13770">[Le, Teel 2021a]</a>, a technique inspired by reset control is demonstrated on convex optimization algorithms, which are algorithms that are widely used in statistical data analysis, among many other applications, and can be modeled as nonlinear systems. This work develops a numerical approach, based on linear matrix inequalities, to certify exponential rates of convergence for reset-based optimization algorithms that are implemented in the discrete-time domain. In addition, it is demonstrated through numerical experiments that resets can greatly improve the efficiency of optimization algorithms when applied to statistical problems such as logistic regression.</p>
+
+<p>I am currently working to extend the soft-reset approach to accomodate several exciting new applications: parameter identification for lithium-ion batteries; multi-agent networked systems with limited communication between agents; and other classes of nonlinear systems, such as input-to-state stable systems, that commonly arise in control engineering applications. The animation shown below depicts a preliminary application of reset control to a problem of formation control in a leader-following multi-agent system, where each agent is simulated with a simple model of holonomic vehicle dynamics with friction. In this simulation, the controllers are severely information-restricted in the sense that they do not know the desired positions associated with each formation, nor do they anticipate the times at which the desired formation switches; each agent only knows the desired displacement vector to be maintained relative to a neighboring agent's position. It is seen here that the reset controller can consistently reduce the unhelpful and wasteful behaviors of the standard controller: at certain times, the “overshoot” behaviors are reduced, while at other times, the redundant “backtracking” behaviors are reduced. Overall, the reset method yields trajectories that are more regular and more akin to what a human operator might produce when manually controlling the vehicles with full knowledge of the desired formations. More details on this application of reset control, among others, can be found in my upcoming publications.</p>
+
+<iframe width="960" height="540" src="https://www.youtube.com/embed/qHle-wT2_j0?playlist=qHle-wT2_j0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
 <!--
-<div class="flex-parent">
-    <div class="sidebar flex-child">
-    <p class="hi">Justin Le</p>
-                <div class="white-box">
-                <p class="first-heading-sidebar">Contact</p>
-                <p>justinle [at] ucsb.edu</p>
-                <p>Harold Frank Hall, 3112</p>
-                <p>University of California, Santa Barbara (UCSB)</p>
-                <p class="heading-sidebar">Curriculum Vitae</p>
-                <p><a href="./articles/cv.pdf">PDF</a>, December 2017.</p>
-                <p class="heading-sidebar">Links</p>
-                <p>
-                    <a href="https://www.linkedin.com/in/lejustinh"><img src="./img/linkedin_logo.png" height="24px"></a>
-                    <a href="https://github.com/Justin-Le"><img src="./img/github_logo.png" height="24px"></a>
-                    <a href="https://stackexchange.com/users/10667416/justin-le?tab=accounts"><img src="./img/stackoverflow_logo.svg" height="24px"></a>
-                </p>
-                </div>
-    </div>
-
-    <div class="card flex-child" id="main">
-        <div class="about">
-            <div class="portrait">
-                <img id="portrait" src="./img/portrait_casual.png">
-            </div>
-            <div class="bio">
-                <p class="heading">Bio</p>
-                <p class="float-text">
-                    I am a Ph.D student in Electrical & Computer Engineering at the <a href="https://www.ucsb.edu/">University of California in Santa Barbara (UCSB)</a>, affiliated with the <a href="https://www.ccdc.ucsb.edu/">Center for Control, Dynamical Systems, and Computation (CCDC)</a>.
-                </p>
-                <p class="float-text">
-                    I received the M.S. degree in Electrical Engineering from the University of Nevada in Las Vegas (UNLV) in 2018, under the advisement of <a href="https://faculty.unlv.edu/pushkin/">Prof. P. Kachroo</a>, and the B.S. degree in Electrical Engineering from UNLV in 2016, with a minor in Mathematics. In 2016, I received the <a href="https://www.unlv.edu/news-story/2016-our-unlv-outstanding-undergraduate-scholar-award-winner-justin-le">Outstanding Undergraduate Research Award</a> at UNLV.
-                </p>
-            </div>
-        </div>
-        <div class="research">
-                <p class="heading">Research</p>
-
-                <p>Thesis:</p>
-                <ul>
-                    <li><a href="./articles/ms_thesis.pdf">Fundamental tradeoffs in estimation of finite-state hidden Markov models</a>. M.S. thesis, Mar. 2018.</li>
-                </ul>
-
-                <p>Conference Proceedings:</p>
-                <ul>
-                    <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-27857-5_61">A deep belief network for classifying remotely-sensed hyperspectral data</a>. International Symposium on Visual Computing (ISVC), Dec. 2015.</li>
-                </ul>
-
-                <p>Talks:</p>
-                <ul>
-                    <li><a href="./talks/pde-seminar">The geometry of signal recovery</a>. November 2017. Seminar on Partial Differential Equations, Dept. of Mathematical Sciences, UNLV.</li>
-                    <li><a href="./talks/ml-seminar">A technical introduction to machine learning</a>. October 2016. Howard R. Hughes College of Engineering, UNLV.</li>
-                    <li>A deep belief network for classifying remotely-sensed hyperspectral data. December 2015. 11th International Conference on Visual Computing (ISVC). Las Vegas, Nevada.</li>
-                </ul>
-
-                <p>Software:</p>
-                <ul>
-                    <li><a href="https://github.com/Justin-Le/nonverbal-toolkit">Real-time classification of time series data</a>, in collaboration with the School of Medicine.</li>
-                    <li><a href="https://github.com/Justin-Le/hyperspectral_classifier_DBN">Data processing tools for the Pavia hyperspectral dataset</a>.</li>
-                    <li>An <a href="https://github.com/ded-sirius/public-assistant">app</a> for speech-control of Google Maps with Amazon Alexa/Echo.</li>
-                </ul>
-
-            <p class="heading">Teaching</p>
-            <p>Spring 2018:</p>
-            <ul>
-                <li><a href="./courses/ee360d-2.html">Signals and Systems I (EE 360D)</a></li>
-            </ul>
-            <p>Fall 2017:</p>
-            <ul>
-                <li><a href="./courses/ee360d.html">Signals and Systems I (EE 360D)</a></li>
-                <li><a href="./courses/ee320.html">Microelectronics (EE 320)</a></li>
-            </ul>
-            <p>Spring 2017:</p>
-            <ul>
-                <li><a href="./courses/ee360-3.html">Signals and Systems I (EE 360)</a></li>
-                <li><a href="./courses/ee361.html">Signals and Systems II (EE 361)</a></li>
-            </ul>
-
-            <p>Fall 2016:</p>
-            <ul>
-                <li><a href="./courses/ee330.html">Electromagnetics (EE 330)</a></li>
-                <li><a href="./courses/ee360-1.html">Signals and Systems I (EE 360 1001)</a></li>
-                <li><a href="./courses/ee360-2.html">Signals and Systems I (EE 360 1002)</a></li>
-            </ul>
-
             <p class="heading">Traveling</p>
 
             <p>You might have met me at one of these conferences:</p>

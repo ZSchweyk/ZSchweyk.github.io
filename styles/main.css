@@ -12,6 +12,12 @@ img {
     border-radius: 4px;
 }
 
+iframe {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .wrapper { 
   display: grid;
   margin: auto;
@@ -75,7 +81,7 @@ img {
   grid-row-end: 5; 
 }
 
-.publications { 
+.research { 
   text-align: center;
   grid-column-start: 5; 
   grid-column-end: 7; 
@@ -83,7 +89,7 @@ img {
   grid-row-end: 5; 
 }
 
-.software { 
+.publications { 
   text-align: center;
   grid-column-start: 7; 
   grid-column-end: 9; 
