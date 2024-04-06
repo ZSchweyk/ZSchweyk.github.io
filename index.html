@@ -1,60 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Justin Le</title>
-<meta name="author" content="Justin Le, UNLV">
-<link rel="stylesheet" type="text/css" href="./styles/main.css">
-<link rel="shortcut icon" href="./img/main.ico">
-<link href="https://fonts.googleapis.com/css?family=Exo|Philosopher|Play|Quicksand|Rajdhani&display=swap" rel="stylesheet"> 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KYTWB9B567"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KYTWB9B567');
-</script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="scripts/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Le</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Buda:wght@300&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Cutive+Mono&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Frank+Ruhl+Libre:wght@300..900&family=Gilda+Display&family=Goudy+Bookletter+1911&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Stylish&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&family=Trykker&family=Yrsa:ital,wght@0,300..700;1,300..700&family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<br>
-<div class="wrapper">
-  <div class="name">Justin Le</div>
-  <div class="contact">
-  <div class="contact-wrapper">
-    <div class="contact-fields">
-    <br>Email:<br>Links:
-    </div>
-    <div class="contact-values">
-    <br>justinle [at] ucsb.edu<br><a href="https://www.linkedin.com/in/lejustinh"><img src="./img/linkedin_logo.png" height="18px"></a>
-                    <a href="https://scholar.google.com/citations?user=fmLA520AAAAJ&hl=en&authuser=1"><img src="./img/google_scholar_logo.png" height="18px"></a>
-                    <a href="https://github.com/Justin-Le"><img src="./img/github_logo.png" height="18px"></a>
-                    <a href="https://stackexchange.com/users/10667416/justin-le?tab=accounts"><img src="./img/stackoverflow_logo.svg" height="18px"></a></div>
-  </div>
-  </div>
+    <div class="container">
+        <aside>
+            <header>
+                <h1>Justin Le</h1>
+            </header>
+            <nav>
+                <ul class="nav-ul">
+                    <li><a href="#" class="nav-link" data-page="bio">Bio</a></li>
+                    <li><a href="#" class="nav-link" data-page="publications">Publications</a></li>
+                    <li><a href="#" class="nav-link" data-page="teaching">Teaching</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://github.com/Justin-Le"><img src="./img/github_logo.png" height="18px"></a>
+                <a href="https://scholar.google.com/citations?user=fmLA520AAAAJ&hl=en"><img src="./img/google_scholar_logo.png" height="18px"></a>
+                <a href="https://stackexchange.com/users/10667416/justin-le?tab=accounts"><img src="./img/stackoverflow_logo.svg" height="18px"></a>
+                <a href="https://www.linkedin.com/in/lejustinh"><img src="./img/linkedin_logo.png" height="18px"></a>
+            </div>             
+        </aside>
 
-  <div class="divider1"></div>
-  <div class="bio"><a class="nav" href="./index.html">Bio</a></div>
-  <div class="research"><a class="nav" href="./research.html">Research</a></div>
-  <div class="publications"><a class="nav" href="./publications.html">Publications</a></div>
-  <!-- <div class="software"><a class="nav" href="./software.html">Software</a></div> -->
-  <div class="teaching"><a class="nav" href="./teaching.html">Teaching</a></div>
-  <div class="divider2"></div>
-  <div class="body">
-  <br>
-  <br>
-  <div class="wrapper-bio">
-  <div class="item-bio"><p><img id="portrait" src="./img/portrait_casual.png" height="200px"></p></div>
-  <div class="item-bio">
-        <p>I work for a defense contractor developing algorithms, software, and firmware for navigation and sensor calibration in GPS-denied embedded systems. I also develop lightweight motor technology for motion and propulsion systems demanding high power density and torque density.</p>
-        <p>I have a Ph.D in Electrical & Computer Engineering from the <a href="https://en.wikipedia.org/wiki/University_of_California,_Santa_Barbara">University of California in Santa Barbara (UCSB)</a>, where I conducted research at the <a href="https://www.ccdc.ucsb.edu/">Center for Control, Dynamical Systems, and Computation (CCDC)</a> under the advisement of <a href="https://scholar.google.com/citations?user=0eupQNQAAAAJ&hl=en">Prof. Andrew Teel</a>. I received the 2018-2019 award for Outstanding Teaching Assistant in Electrical Engineering at UCSB.</p>
-        <p>I received the M.S. degree in Electrical Engineering from the <a href="https://en.wikipedia.org/wiki/University_of_Nevada,_Las_Vegas">University of Nevada in Las Vegas (UNLV)</a> in 2018, under the advisement of <a href="https://faculty.unlv.edu/pushkin/">Prof. Pushkin Kachroo</a>, and the B.S. degree in Electrical Engineering from UNLV in 2016, with a minor in Mathematics. In 2016, I received the <a href="https://www.unlv.edu/news-story/2016-our-unlv-outstanding-undergraduate-scholar-award-winner-justin-le">Outstanding Undergraduate Research Award</a> at UNLV.</p>
-  </div>
-  </div>
-</div>
+        <main id="main-content">
+            <!-- Content will be loaded dynamically -->
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
