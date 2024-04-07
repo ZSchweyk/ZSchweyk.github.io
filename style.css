@@ -10,7 +10,7 @@ main.fade-in {
 
 nav ul li a.active {
     text-decoration: underline;
-    text-decoration-color: #cc0000;
+    text-decoration-color: #b30000;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
 }
@@ -77,11 +77,11 @@ body {
 }
 
 a:link {
-color: #cc0000;
+color: #b30000;
 }
 
 a:visited {
-color: #cc0000;
+color: #b30000;
 }
 
 .social-links img {
