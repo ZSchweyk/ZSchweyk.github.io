@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     mainContent.innerHTML = data;
                     setTimeout(() => {
                         mainContent.classList.add('fade-in');
+                        window.scrollTo(0, 0);
                     }, 40);
                 })
                 .catch(error => {
