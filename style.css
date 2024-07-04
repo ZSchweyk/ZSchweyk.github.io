@@ -148,7 +148,10 @@ iframe {
     
     h1 {
         font-size: 24px;
-        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: row;
     }
     
     nav ul li {
