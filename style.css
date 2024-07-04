@@ -127,9 +127,10 @@ iframe {
     height: calc(80vw * 9 / 16);
 }
 
-@media (max-aspect-ratio: 4/3) {
+/* If on phone or smaller device */
+@media (max-aspect-ratio: 4/3) { 
     .container {
-        flex-direction: column;
+        flex-direction: column; 
     }
     
     aside {
@@ -143,6 +144,7 @@ iframe {
     
     header {
         margin-bottom: 20px;
+        text-align: center;
     }
     
     h1 {
