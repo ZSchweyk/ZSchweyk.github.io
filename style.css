@@ -151,7 +151,13 @@ iframe {
     }
 
     nav ul {
-        flex-direction: row;
+        /* flex-direction: row; */
+        /* This is my attempt at horizontally aligning the items on mobile */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* */
     }
     
     nav ul li {
