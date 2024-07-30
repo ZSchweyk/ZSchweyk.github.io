@@ -115,7 +115,7 @@ p {
 ul.nav-ul {
     list-style-type: none;
     color: #f5f5f5;
-    margin-left: 20px;
+    margin-left: 0px;
     font-size: 16px;
 }
 
@@ -159,7 +159,7 @@ iframe {
     }
     
     nav ul li {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     
     nav ul li a {
