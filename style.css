@@ -134,9 +134,10 @@ iframe {
         position: static;
         width: 90%;
         height: auto;
-        padding: 20px;
+        padding: 10px;
         border-right: none;
         border-bottom: 1px solid #990000;
+        
     }
     
     header {
@@ -270,7 +271,7 @@ iframe {
 
     .social-links {
         margin-top: 32px;
-        margin-left: 20px;
+        margin-left: 0px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
