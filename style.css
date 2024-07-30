@@ -62,7 +62,7 @@ nav ul {
 
 nav ul li {
     margin-bottom: 20px;
-    padding-inline: 8px;
+    padding-inline: 8px; /* add padding between menu page titles */
 }
 
 nav ul li a {
@@ -94,11 +94,7 @@ color: red;
 }
 
 .social-links a {
-    margin-right: 10px;
-}
-
-.social-links a:last-child {
-    margin-right: 0;
+    padding-inline: 10px;
 }
 
 section {
@@ -221,10 +217,10 @@ iframe {
     .social-links {
         margin-top: 0px;
         margin-bottom: 8px;
-        margin-left: 20px;
+        /* margin-left: 20px; */ 
+        flex-direction: row;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        justify-content: center; /* center social icons */
     }
 
     #teaching {
