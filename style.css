@@ -124,10 +124,20 @@ iframe {
     height: calc(80vw * 9 / 16);
 }
 
+embed {
+    width: 800px;
+    height: 1150px;
+}
+
 /* If on phone or smaller device */
 @media (max-aspect-ratio: 4/3) { 
     .container {
         flex-direction: column; 
+    }
+
+    embed {
+        width: 400px;
+        height: 575px;
     }
     
     aside {
