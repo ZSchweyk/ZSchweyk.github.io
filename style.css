@@ -217,8 +217,7 @@ iframe {
     .social-links {
         margin-top: 0px;
         margin-bottom: 8px;
-        /* margin-left: 20px; */ 
-        flex-direction: row;
+        flex-direction: row; /* this is redundant but whatever */
         display: flex;
         justify-content: center; /* center social icons */
     }
