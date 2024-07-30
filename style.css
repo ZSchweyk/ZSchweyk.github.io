@@ -94,7 +94,7 @@ color: red;
 }
 
 .social-links a {
-    padding-inline: 10px;
+    padding-inline: 4px;
 }
 
 section {
@@ -220,6 +220,10 @@ iframe {
         flex-direction: row; /* this is redundant but whatever */
         display: flex;
         justify-content: center; /* center social icons */
+    }
+
+    .social-links a {
+        padding-inline: 10px;
     }
 
     #teaching {
