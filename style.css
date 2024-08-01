@@ -244,6 +244,10 @@ embed {
 }
 
 @media (min-aspect-ratio: 4/3) {
+    .nav-ul {
+        overflow-y: auto;
+    }
+
     .container {
         display: flex;
     }
