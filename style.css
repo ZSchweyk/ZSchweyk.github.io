@@ -80,6 +80,7 @@ body {
     font-family: "Texturina", "Trykker", "Yuji Syuku", serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 a:link {
@@ -244,12 +245,13 @@ embed {
 }
 
 @media (min-aspect-ratio: 4/3) {
-    .nav-ul {
+    /* .nav-ul {
         overflow-y: auto;
-    }
+    } */
 
     .container {
         display: flex;
+        height: 100%;
     }
 
     aside {
