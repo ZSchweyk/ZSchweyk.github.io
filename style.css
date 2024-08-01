@@ -45,6 +45,7 @@ tr:nth-child(even) {
 
 header {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 h1 {
@@ -142,9 +143,9 @@ embed {
     
     aside {
         position: static;
-        width: 90%;
+        width: 100%;
         height: auto;
-        padding: 10px;
+        padding: 0px; /* Zero padding makes sure you don't have to horizontally scroll */
         border-right: none;
         border-bottom: 1px solid #990000;
         
