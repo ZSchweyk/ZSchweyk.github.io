@@ -259,7 +259,7 @@ embed {
         position: fixed;
         width: 160px;
         height: 100vh; /* vh stands for viewport height (the height of the view) */
-        padding: 0px 40px 40px 40px; /* top, right, bottom, left */
+        padding: 40px 40px 40px 40px; /* top, right, bottom, left */
         border-right: 1px solid #990000;
         overflow-y: auto;
     }
