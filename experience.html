@@ -13,74 +13,74 @@
 
 
     <style>
-      /* body {
-        font-family: Arial, sans-serif;
-        background-color: #76c4e6;
-        color: #333;
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-      } */
-
       .experience-container {
-        width: 60%;
-        max-width: 800px;
-        /* background-color: #ffffff; */
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-      }
+      width: 100%;
+      max-width: 800px;
+      /* background-color: #ffffff; */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
 
-      .experience-item {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-      }
+    .experience-item {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping on smaller screens */
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
 
-      .experience-item:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
+    .experience-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
 
-      .job-info {
-        max-width: 100%;
-      }
+    .job-info {
+      flex: 1 1 60%; /* Takes up to 60% of the space */
+      max-width: 70%; /* Prevents it from growing too large */
+    }
 
-      .job-position {
-        font-size: 1.2em;
-        font-weight: bold;
-      }
+    .job-position {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
 
-      .company-name {
-        font-size: 1em;
-        /* color: #777; */
-		color: #ddd;
-        margin-top: 5px;
-      }
+    .company-name {
+      font-size: 1em;
+      color: #777;
+      margin-top: 5px;
+    }
 
+    .time-period {
+      flex: 1 1 30%; /* Takes up to 30% of the space */
+      font-size: 1em;
+      color: #888;
+      text-align: right;
+      margin-top: 5px;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 600px) {
       .time-period {
-        font-size: 1em;
-        /* color: #888; */
-		color: #ddd;
-        text-align: right;
-        flex-shrink: 0;
-      }
-
-      /* Styling for the job description list */
-      .experience-description {
-        list-style-type: disc;
-        padding-left: 20px;
+        text-align: left;
+        width: 100%; /* Full width on smaller screens */
         margin-top: 10px;
-		color: #ddd;
-        /* color: #555; */
       }
+    }
 
-      .experience-description li {
-        margin-bottom: 5px;
-        line-height: 1.6;
-      }
+    /* Styling for the job description list */
+    .experience-description {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .experience-description li {
+      margin-bottom: 5px;
+      line-height: 1.6;
+    }
     </style>
 </head>
 <body>
