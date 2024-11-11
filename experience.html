@@ -13,19 +13,16 @@
 
 
     <style>
-      .experience-container {
+	.experience-container {
       width: 100%;
       max-width: 800px;
       /* background-color: #ffffff; */
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      padding: 20px, 20px, 20px, 20px;
     }
 
     .experience-item {
-      display: flex;
-      flex-wrap: wrap; /* Allows wrapping on smaller screens */
-      justify-content: space-between;
       margin-bottom: 20px;
       padding-bottom: 15px;
       border-bottom: 1px solid #ddd;
@@ -36,8 +33,14 @@
       margin-bottom: 0;
     }
 
+    .position-container {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping on smaller screens */
+      justify-content: space-between;
+    }
+
     .job-info {
-      flex: 1 1 60%; /* Takes up to 60% of the space */
+      flex: 1 1 100%; /* Takes up to 60% of the space */
       max-width: 70%; /* Prevents it from growing too large */
     }
 
@@ -61,7 +64,11 @@
     }
 
     /* Media query for smaller screens */
-    @media (max-width: 600px) {
+    @media (max-aspect-ratio: 4/3) {
+		.experience-container {
+			width: 95%;
+			margin: 0 auto;
+		}
       .time-period {
         text-align: left;
         width: 100%; /* Full width on smaller screens */
@@ -88,44 +95,41 @@
         <div class="experience-container">
 
 			<div class="experience-item">
-				<div class="job-info">
-					<div class="job-position">Radio Frequency Software</div>
-					<div class="company-name">Toyon Research Corp.</div>
-					<ul class="experience-description">
+				<div class="position-container">
+					<div class="job-info">
+						<div class="job-position">Radio Frequency Software Intern</div>
+						<div class="company-name">Toyon Research Corp.</div>
+					</div>
+					<div class="time-period">May-Aug 2022 - Present</div>
+				</div>
+				<div class="experience-description">
+					<ul>
 						<li>SECRET security clearance</li>
 						<li>Developed and maintained web applications.</li>
 						<li>Collaborated with cross-functional teams to define project requirements.</li>
 						<li>Improved application performance by optimizing code and database queries.</li>
 					</ul>
 				</div>
-				<div class="time-period">May-Aug 2022 - Present</div>
 			</div>
 
 			<div class="experience-item">
-			  <div class="job-info">
-				<div class="job-position">Web Developer</div>
-				<div class="company-name">Creative Agency</div>
-				<ul class="experience-description">
-				  <li>Designed and implemented responsive websites for clients.</li>
-				  <li>Managed website updates and ensured cross-browser compatibility.</li>
-				</ul>
-			  </div>
-			  <div class="time-period">January 2018 - May 2020</div>
+				<div class="position-container">
+					<div class="job-info">
+						<div class="job-position">Radio Frequency Software Intern</div>
+						<div class="company-name">Toyon Research Corp.</div>
+					</div>
+					<div class="time-period">May-Aug 2022 - Present</div>
+				</div>
+				<div class="experience-description">
+					<ul>
+						<li>SECRET security clearance</li>
+						<li>Developed and maintained web applications.</li>
+						<li>Collaborated with cross-functional teams to define project requirements.</li>
+						<li>Improved application performance by optimizing code and database queries.</li>
+					</ul>
+				</div>
 			</div>
-		  </div>
 
-
-
-
-
-
-        <div>
-          <p>Radio Frequency (RF) Software Intern</p>
-          <p>Toyon Research Corporation - Summers of '22, '23, '24</p>
-          <ul>
-            <li>Developed software for motor control</li>
-          </ul>
-        </div>
     </section>
 </body>
 </html>
