@@ -70,24 +70,26 @@
 			margin: 0 auto;
 		}
       .time-period {
-        text-align: left;
+        text-align: right;
         width: 100%; /* Full width on smaller screens */
-        margin-top: 10px;
+        margin-top: 0px;
       }
     }
 
     /* Styling for the job description list */
     .experience-description {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-top: 10px;
-      color: #555;
-    }
+	list-style-type: disc; /* Remove default bullet points */
+	padding-left: 20px;
+	margin-top: 10px;
+	color: #555;
+	}
 
-    .experience-description li {
-      margin-bottom: 5px;
-      line-height: 1.6;
-    }
+	.experience-description li {
+	position: relative;
+	margin-bottom: 5px;
+	padding-left: 15px; /* Space for the dash */
+	line-height: 1.6;
+	}
     </style>
 </head>
 <body>
