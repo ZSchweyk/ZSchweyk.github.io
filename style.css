@@ -135,11 +135,13 @@ embed {
 /* If on phone or smaller device */
 @media (max-aspect-ratio: 4/3) { 
     #main-content {
-        /* max-width: 900px; */
+        height: 75vh;
+        overflow-y: auto;
     }
 
     .container {
-        flex-direction: column; 
+        flex-direction: column;
+        position: fixed;
     }
 
     embed {
@@ -150,8 +152,6 @@ embed {
     aside {
         position: static;
         width: 100%;
-        /* height: auto; */
-        overflow-y: auto;
         padding: 0px; /* Zero padding makes sure you don't have to horizontally scroll */
         border-right: none;
         border-bottom: 1px solid #990000;
