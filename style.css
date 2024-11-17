@@ -46,8 +46,8 @@ tr:nth-child(even) {
 }
 
 header {
-    margin-bottom: 40px;
-    text-align: center;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 h1 {
@@ -155,7 +155,6 @@ embed {
         padding: 0px; /* Zero padding makes sure you don't have to horizontally scroll */
         border-right: none;
         border-bottom: 1px solid #990000;
-        
     }
     
     header {
@@ -254,27 +253,41 @@ embed {
 }
 
 @media (min-aspect-ratio: 4/3) {
-    /* .nav-ul {
-        overflow-y: auto;
-    } */
 
     .container {
         display: flex;
-        height: 100%;;
+        height: 100%;
+        position: fixed; /* Lets <aside> and <main> scroll on their own */
     }
 
     aside {
         position: fixed;
-        width: 160px;
-        height: 100vh; /* vh stands for viewport height (the height of the view) */
-        padding: 40px 40px 40px 40px; /* top, right, bottom, left */
+        width: 200px; /* Increase this if menu words are too long */
+        /* When you add top padding, it increases the content's space within the <aside>, but not the height of the <aside> */
+        
+        /* Subtract top padding plus a little more from the height to work on mobile landscape */
+        /* height: calc(100% - 40px); */
+
+        /* However, this would make the red vertical line be cut short. box-sizing instead similarly fixes this problem */
+
+        height: 100%;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-bottom: 25px;
+        /* top, right, bottom, left */
+        /* padding: 20px 20px 0px 40px;  */
         border-right: 1px solid #990000;
         overflow-y: auto;
+        box-sizing: border-box; /* Include padding in height calculation */
     }
 
     main {
-        padding: 40px;
-        margin-left: 240px;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 200px; /* Increase this if menu words are too long... this is probably a temporary fix for now */
+        overflow-y: auto;
+        /* overflow-x: hidden; */
     }
 
     ul.publications-ul {
