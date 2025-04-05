@@ -20,13 +20,7 @@ img {
     border-radius: 4px;
 }
 
-.centered-img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 300px; /* Adjust this as needed */
-    height: auto;
-}
+
 
 .column img {
     width:100%;

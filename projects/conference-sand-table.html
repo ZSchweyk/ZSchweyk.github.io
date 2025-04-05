@@ -10,24 +10,34 @@
         posthog.init('phc_9b3r0tWN2PsELleDZwZpW1HZQKq8i1w9htTkU7ul1U9',{api_host:'https://app.posthog.com'})
     </script>
     <style>
-      .experience-container {
-      width: 100%;
-      /* max-width: 800px; */
-      /* background-color: #2f3232; */
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px, 40px, 20px, 20px;
-    }
-      /* Media query for smaller screens */
-      @media (max-aspect-ratio: 4/3) {
-        .experience-container {
-          width: 100%;
+
+      .centered-text {
+        text-align: center;
+      }
+      .centered-img {
+          display: block;
           margin: 0 auto;
-        }
-        .time-period {
-          width: 100%; /* Full width on smaller screens */
-          /* font-size: 13px; */
-        }
+          max-width: 100%;
+          width: 500px; /* Adjust this as needed */
+          height: auto;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .video-grid iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-width: 300px;
+        max-height: 200px;
+        border: none;
       }
 
 
@@ -36,10 +46,47 @@
 </head>
 <body>
 
-  <section class="experience-container" id="conference-sand-table">
+  <section id="conference-sand-table">
     <p><a href="#" class="projects" data-page="projects"><-Projects</a></p>
 
-    <img src="img/ai/000.webp" alt="" class="centered-img">
+    <h1 class="centered-text">Conference Sand Table</h1>
+    <h2 class="centered-text">GitHub <a href="https://github.com/ZSchweyk/ConferenceSandTable/tree/Showcase" target="_blank">Repo</a></h2>
+
+    <!-- <img src="img/conference-sand-table/table.webp" alt="Conference Sand Table" class="centered-img"> -->
+
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/gglkHWhM4a4?si=MpG9MUYLFg1Nb-rz" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/s5Y0UqFDjss?si=3Lb1dEG1JzW8Zx7_" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/835fNt7cJ94?si=QupPxFQ-mIOXf8lO" allowfullscreen></iframe>
+    </div>
+
+
+    <!-- <iframe 
+      src="https://www.youtube.com/embed/gglkHWhM4a4?si=MpG9MUYLFg1Nb-rz"
+      style="width: 400px; height: 225px; display: block; margin: 0 auto;" 
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      >
+    </iframe>
+
+    <iframe 
+      src="https://www.youtube.com/embed/gglkHWhM4a4?si=MpG9MUYLFg1Nb-rz"
+      style="width: 400px; height: 225px; display: block; margin: 0 auto;" 
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      >
+    </iframe> -->
+    <br>
+    <p>
+      During my high school senior year at the <a href="https://www.dpengineering.org/" target="_blank">Dos Pueblos Engineering Academy (DPEA)</a>, I worked on the software and hardware for a Conference Sand Table.
+      The table was about 6-feet in diameter with an arm that spans the diameter of the table, with two marbles attracted to strong permanent magnets to create designs based off of polar equations.
+      I used 3 <a href="https://odriverobotics.com/?srsltid=AfmBOoqFAUHfJkLc4q8sQra63uPROIvIGZfI-_QqDkfbFTj_x0cjyQ21">ODrive</a> motors (powerful servos),
+      with one motor controlling the angular velocity of the diameter arm and the other two motors setting the distance of the two marbles from the center of the table.
+    </p>
 
     <!-- This is a hack to get the red line to extend all the way to the right on smaller desktop screens -->
     <p style="color: black;">Working on migrating all the documentation for some of my projects from other other other other other other other other other other other other other other other other other other other to here. For now, you can easily view them there. I'll be adding new projects here that are not listed on my other site very soon...</p>
