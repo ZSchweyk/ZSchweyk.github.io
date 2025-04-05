@@ -1,27 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const mainContent = document.getElementById('main-content');
+    var data_pages = []
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const page = link.getAttribute('data-page');
+            data_pages.push(page);
             loadPage(page);
             setActiveLink(link);
         });
     });
 
     mainContent.addEventListener('click', (e) => {
-        if (e.target.matches('.verizon-seminar-link')) {
+        // add for loop here so I don't need to add a class and data-page that are the same for "projects" for example
+        
+
+        if (e.target.matches('.conference-sand-table')) {
             e.preventDefault();
-            loadPage('talks/verizon-seminar');
+            loadPage('projects/conference-sand-table');
         } else if (e.target.matches('.pde-seminar-link')) {
             e.preventDefault();
             loadPage('talks/pde-seminar');
         } else if (e.target.matches('.ml-seminar-link')) {
             e.preventDefault();
             loadPage('talks/ml-seminar');
-        }        
+        } else if (e.target.matches(".projects")) {
+            e.preventDefault();
+            loadPage('projects');
+        }
     });
 
     function loadPage(page) {
