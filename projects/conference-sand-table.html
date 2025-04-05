@@ -15,9 +15,19 @@
         text-align: center;
       }
 
-      .image-grid {
+      .image-grid3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .image-grid4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         max-width: 1000px;
         margin: 0 auto;
@@ -34,12 +44,16 @@
 
       /* 📱 Mobile: Stack images vertically */
       @media (max-width: 768px) {
-        .image-grid {
+        .image-grid3 {
+          grid-template-columns: 1fr;
+        }
+
+        .image-grid4 {
           grid-template-columns: 1fr;
         }
       }
 
-      .grid {
+      .grid3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
@@ -49,7 +63,25 @@
         justify-items: center;
       }
 
-      .grid iframe {
+      .grid4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .grid3 iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-width: 300px;
+        max-height: 200px;
+        border: none;
+      }
+
+      .grid4 iframe {
         width: 100%;
         aspect-ratio: 16 / 9;
         max-width: 300px;
@@ -59,11 +91,19 @@
 
       /* 📱 Mobile: Stack videos vertically */
       @media (max-width: 768px) {
-        .grid {
+        .grid3 {
           grid-template-columns: 1fr;
         }
 
-        .grid iframe {
+        .grid4 {
+          grid-template-columns: 1fr;
+        }
+
+        .grid3 iframe {
+          max-width: 100%;
+        }
+
+        .grid4 iframe {
           max-width: 100%;
         }
       }
@@ -82,7 +122,7 @@
 
     <!-- <img src="img/conference-sand-table/table.webp" alt="Conference Sand Table" class="centered-img"> -->
 
-    <div class="grid">
+    <div class="grid3">
       <iframe src="https://www.youtube.com/embed/gglkHWhM4a4?si=MpG9MUYLFg1Nb-rz" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/s5Y0UqFDjss?si=3Lb1dEG1JzW8Zx7_" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/835fNt7cJ94?si=QupPxFQ-mIOXf8lO" allowfullscreen></iframe>
@@ -90,30 +130,34 @@
 
     <br>
     <p>
-      During my high school senior year at the <a href="https://www.dpengineering.org/" target="_blank">Dos Pueblos Engineering Academy (DPEA)</a>, I acquired the necessary hardware and Raspberry Pis, and wrote the software for a Conference Sand Table.
+      During my high school senior year at the <a href="https://www.dpengineering.org/" target="_blank">Dos Pueblos Engineering Academy (DPEA)</a>, I acquired the necessary hardware and Raspberry Pis, and wrote the software from scratch for a Conference Sand Table,
+      meant to be sold to a company for use during conferences, or displayed at the Moxi science museum in Santa Barbara, CA or the Exploratorium in San Francisco.
       I also did some occasional CAD and lazer cutting for smaller mechanical components.
-      The table was about 6-feet in diameter with an arm that spans the diameter of the table, and two marbles attracted to strong permanent magnets whose distances can vary from the center of the table. 
-      These marbles sit in sand and create designs based off of polar equations.
+    </p>
+    <p>
+      The table is about 6-feet in diameter with an arm that spans the diameter of the table, and two marbles attracted to strong permanent magnets whose distances can vary from the center of the table via motors and lead screws. 
+      These marbles sit and move around in sand to create designs based off of user-defined polar equations.
     </p>
 
     <p>
-      The mechanical aspects of the table were quite interesting, and lead to some deep brainstorming on what electronics to use and where exactly they should be placed.
+      Electronics:
+      <ul>
+        <li>3 <a href="https://odriverobotics.com/?srsltid=AfmBOoqFAUHfJkLc4q8sQra63uPROIvIGZfI-_QqDkfbFTj_x0cjyQ21">ODrive</a> motors (powerful servos) - 2 at the center of the table controlling the radii of the marbles (r1 and r2), and 1 below the table controlling the angular velocity of the diameter arm</li>
+        <li>2 motor controller boards, 1 for the theta motor and 1 for r1 and r2</li>
+        <li>2 Raspberry Pis - 1 at the center of the table (radius pi) to send commands to the 2 radii motors, and 1 below the table (theta pi) to host an Apache server running a Flask application as the UI and send radius data points to the other pi via TCP/IP</li>
+      </ul>
+    </p>
+
+
+    <p>
+      The mechanical aspects of the table were quite interesting, and led to a fair amount of brainstorming to arrive at what electronics to use and where exactly they should be placed.
       As the images show below, the table had a slip-ring so the electronics (specifically the ODrive motor controller and raspberry pi) sitting at the center of the table could rotate freely
       with brushed connections to the stationary electronics sitting below the table, while meeting all the necessary power requirements. After some more thought, this prompted
       the use of two Raspberry Pis; the theta pi would remain stationary below the table and the rotating pi (along with the ODrive motor controller board) would be placed at 
       the center of the table, with all the electronic connections being fed through the slip ring.
     </p>
 
-    <p>
-      Components:
-      <ul>
-        <li>3 ODrive motors - 2 controlling the radii of the marbles at the center of the table and 1 controlling the angular velocity of the diameter arm below the table</li>
-        <li>One motor controller board</li>
-        <li>2 Raspberry Pis - 1 at the center of the table to send commands to the 2 radii motors, and 1 below the table to host an Apache server running a Flask application as the UI and send radius data points to the other pi</li>
-      </ul>
-    </p>
-
-    <div class="image-grid">
+    <div class="grid3">
       <img src="img/conference-sand-table/table.webp" alt="" class="centered-img">
       <img src="img/conference-sand-table/slip-ring.webp" alt="" class="centered-img">
       <img src="img/conference-sand-table/slip-ring-close-up.webp" alt="" class="centered-img">
@@ -123,27 +167,54 @@
       <img src="img/conference-sand-table/odrive-board.webp" alt="" class="centered-img">
       <img src="img/conference-sand-table/center-piece-top.webp" alt="" class="centered-img">
       <img src="img/conference-sand-table/center-piece-front.webp" alt="" class="centered-img">
-
     </div>
 
     <p>
-      I used 3 <a href="https://odriverobotics.com/?srsltid=AfmBOoqFAUHfJkLc4q8sQra63uPROIvIGZfI-_QqDkfbFTj_x0cjyQ21">ODrive</a> motors (powerful servos),
-      with one motor (theta) controlling the angular velocity of the diameter arm and the other two motors (r1 and r2) setting the linear distance of the two marbles from the center of the table.
       Working in polar coordinates was a natural decision, as creating designs from polar equations was the goal. As the theta motor's angle changes, the radius from the origin also changes.
       Since there was 1 diameter arm (i.e. 2 radii arms offset by 180 degrees), the theta motor only had to rotate half of the entire domain of the polar equation until a given design started to repeat itself.
     </p>
 
     <p>
-      On the stationary theta pi, I installed Apache, configured a web server, and set up a simple Flask application on it using Python and SQLite.
+      On the stationary theta pi, I installed and configured an Apache web server, and set up and deployed a simple Flask application on it using Python and SQLite.
       This served as the table's UI and allowed users to
       <ul>
         <li>create and login to their accounts</li>
         <li>add, delete, and edit polar equations</li>
         <li>specify rotational speed as a percentage of a certain maximum to allow for more or less detail (radius points) in the polar design</li>
+        <li>specify the scale as a percentage of the radius of the table (could also define the polar equation with the correct scaling constants)</li>
         <li>start and stop drawing polar equations</li>
       </ul>
     </p>
 
+    <p>Here are some screenshots of the main UI screens...</p>
+    <div class="grid4">
+      <img src="img/conference-sand-table/createaccount-screen.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/login-screen.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/home-screen.webp" alt="" class="centered-img">
+      <!-- add equations screen here that allows user to specify scale, speed, and so on... -->
+    </div>
+
+    <p>Here are the main Flask html templates to dynamically load user content from the SQLite database...</p>
+    <div class="grid4">
+      <img src="img/conference-sand-table/sign-up-form-html.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/sign-in-form-html.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/home-html-form.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/equations-form-html.webp" alt="" class="centered-img">
+    </div>
+
+    <p>Here are the Python endpoint handlers...</p>
+    <div class="grid4">
+      <img src="img/conference-sand-table/signup-endpoint-logic.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/login-endpoint-logic.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/home-endpoint-logic.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/equation-endpoint-logic.webp" alt="" class="centered-img">
+    </div>
+
+    <p>Here are the SQLite database models...</p>
+    <div class="grid4">
+      <img src="img/conference-sand-table/login-and-signup-models.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/users-model.webp" alt="" class="centered-img">
+    </div>
 
 
 
