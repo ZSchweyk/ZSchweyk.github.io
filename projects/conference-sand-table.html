@@ -14,30 +14,58 @@
       .centered-text {
         text-align: center;
       }
-      .centered-img {
-          display: block;
-          margin: 0 auto;
-          max-width: 100%;
-          width: 500px; /* Adjust this as needed */
-          height: auto;
-      }
 
-      .video-grid {
+      .image-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        max-width: 1200px;
+        max-width: 1000px;
         margin: 0 auto;
         padding: 20px;
         justify-items: center;
       }
 
-      .video-grid iframe {
+      .centered-img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+      }
+
+      /* 📱 Mobile: Stack images vertically */
+      @media (max-width: 768px) {
+        .image-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .grid iframe {
         width: 100%;
         aspect-ratio: 16 / 9;
         max-width: 300px;
         max-height: 200px;
         border: none;
+      }
+
+      /* 📱 Mobile: Stack videos vertically */
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .grid iframe {
+          max-width: 100%;
+        }
       }
 
 
@@ -54,51 +82,67 @@
 
     <!-- <img src="img/conference-sand-table/table.webp" alt="Conference Sand Table" class="centered-img"> -->
 
-    <div class="video-grid">
+    <div class="grid">
       <iframe src="https://www.youtube.com/embed/gglkHWhM4a4?si=MpG9MUYLFg1Nb-rz" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/s5Y0UqFDjss?si=3Lb1dEG1JzW8Zx7_" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/835fNt7cJ94?si=QupPxFQ-mIOXf8lO" allowfullscreen></iframe>
     </div>
 
-
-    <!-- <iframe 
-      src="https://www.youtube.com/embed/gglkHWhM4a4?si=MpG9MUYLFg1Nb-rz"
-      style="width: 400px; height: 225px; display: block; margin: 0 auto;" 
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      >
-    </iframe>
-
-    <iframe 
-      src="https://www.youtube.com/embed/gglkHWhM4a4?si=MpG9MUYLFg1Nb-rz"
-      style="width: 400px; height: 225px; display: block; margin: 0 auto;" 
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      >
-    </iframe> -->
     <br>
     <p>
-      During my high school senior year at the <a href="https://www.dpengineering.org/" target="_blank">Dos Pueblos Engineering Academy (DPEA)</a>, I worked on the software and hardware for a Conference Sand Table.
-      The table was about 6-feet in diameter with an arm that spans the diameter of the table, with two marbles attracted to strong permanent magnets to create designs based off of polar equations.
-      I used 3 <a href="https://odriverobotics.com/?srsltid=AfmBOoqFAUHfJkLc4q8sQra63uPROIvIGZfI-_QqDkfbFTj_x0cjyQ21">ODrive</a> motors (powerful servos),
-      with one motor controlling the angular velocity of the diameter arm and the other two motors setting the distance of the two marbles from the center of the table.
+      During my high school senior year at the <a href="https://www.dpengineering.org/" target="_blank">Dos Pueblos Engineering Academy (DPEA)</a>, I acquired the necessary hardware and Raspberry Pis, and wrote the software for a Conference Sand Table.
+      I also did some occasional CAD and lazer cutting for smaller mechanical components.
+      The table was about 6-feet in diameter with an arm that spans the diameter of the table, and two marbles attracted to strong permanent magnets whose distances can vary from the center of the table. 
+      These marbles sit in sand and create designs based off of polar equations.
     </p>
 
-    <!-- This is a hack to get the red line to extend all the way to the right on smaller desktop screens -->
-    <p style="color: black;">Working on migrating all the documentation for some of my projects from other other other other other other other other other other other other other other other other other other other to here. For now, you can easily view them there. I'll be adding new projects here that are not listed on my other site very soon...</p>
+    <p>
+      The mechanical aspects of the table were quite interesting, and lead to some deep brainstorming on what electronics to use and where exactly they should be placed.
+      As the images show below, the table had a slip-ring so the electronics (specifically the ODrive motor controller and raspberry pi) sitting at the center of the table could rotate freely
+      with brushed connections to the stationary electronics sitting below the table, while meeting all the necessary power requirements. After some more thought, this prompted
+      the use of two Raspberry Pis; the theta pi would remain stationary below the table and the rotating pi (along with the ODrive motor controller board) would be placed at 
+      the center of the table, with all the electronic connections being fed through the slip ring.
+    </p>
 
+    <p>
+      Components:
+      <ul>
+        <li>3 ODrive motors - 2 controlling the radii of the marbles at the center of the table and 1 controlling the angular velocity of the diameter arm below the table</li>
+        <li>One motor controller board</li>
+        <li>2 Raspberry Pis - 1 at the center of the table to send commands to the 2 radii motors, and 1 below the table to host an Apache server running a Flask application as the UI and send radius data points to the other pi</li>
+      </ul>
+    </p>
 
-    
+    <div class="image-grid">
+      <img src="img/conference-sand-table/table.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/slip-ring.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/slip-ring-close-up.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/radius-wheel.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/radius-arm-top.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/radius-arm-side.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/odrive-board.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/center-piece-top.webp" alt="" class="centered-img">
+      <img src="img/conference-sand-table/center-piece-front.webp" alt="" class="centered-img">
 
+    </div>
 
+    <p>
+      I used 3 <a href="https://odriverobotics.com/?srsltid=AfmBOoqFAUHfJkLc4q8sQra63uPROIvIGZfI-_QqDkfbFTj_x0cjyQ21">ODrive</a> motors (powerful servos),
+      with one motor (theta) controlling the angular velocity of the diameter arm and the other two motors (r1 and r2) setting the linear distance of the two marbles from the center of the table.
+      Working in polar coordinates was a natural decision, as creating designs from polar equations was the goal. As the theta motor's angle changes, the radius from the origin also changes.
+      Since there was 1 diameter arm (i.e. 2 radii arms offset by 180 degrees), the theta motor only had to rotate half of the entire domain of the polar equation until a given design started to repeat itself.
+    </p>
 
-
-
-
+    <p>
+      On the stationary theta pi, I installed Apache, configured a web server, and set up a simple Flask application on it using Python and SQLite.
+      This served as the table's UI and allowed users to
+      <ul>
+        <li>create and login to their accounts</li>
+        <li>add, delete, and edit polar equations</li>
+        <li>specify rotational speed as a percentage of a certain maximum to allow for more or less detail (radius points) in the polar design</li>
+        <li>start and stop drawing polar equations</li>
+      </ul>
+    </p>
 
 
 
