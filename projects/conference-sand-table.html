@@ -76,9 +76,6 @@
           max-width: 100%;
         }
       }
-
-
-      
     </style>
 </head>
 <body>
@@ -155,6 +152,37 @@
       </ul>
     </p>
 
+    <p>
+      I set the stationary theta pi to be responsible for 
+      <ol>
+        <li>accepting user input via a web interface through the Apache server</li>
+        <li>sending commands to the theta motor to rotate at the appropriate speed</li>
+        <li>calculate the minimum number of radians for the polar design to fully complete</li>
+        <li>calculating the radius data points for motors r1 and r2 with appropriate scaling in real time, and send those points to the radius pi over the network</li>
+      </ol>
+
+      and the rotating radius pi to be responsible for 
+      <ol>
+        <li>accepting data points as packets from the theta pi over the network</li>
+        <li>writing those data points to the radius motors, r1 and r2</li>
+      </ol>
+    </p>
+
+    <p>
+      For the networking, I used Python's socket library and created client and server classes relevant to this project.
+    </p>
+
+    <p>
+      To convert a radius that the polar equation f(theta) outputs to an exact number of rotations to command the radius motors, I had to do some initial calibration and measurements
+      on the maximum number of rotations for each radius motor to send each marble from the origin to the edge of the table. Once I acquired the necessary constants,
+      this conversion from polar equation radius to motor command simply became a scaling/percentage of the maximum number of rotations each radius motor can possibly move.
+    </p>
+
+    <p>
+      Lastly, I configured each pi to run the necessary code on bootup (with appropriate delays in place), which involved creating some bash scripts on the pis.
+    </p>
+
+    <br><br><br>
     <p>Here are some screenshots of the main UI screens...</p>
     <div class="grid4">
       <img src="img/conference-sand-table/createaccount-screen.webp" alt="" class="centered-img">
