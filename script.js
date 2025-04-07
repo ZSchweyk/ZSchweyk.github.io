@@ -15,11 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mainContent.addEventListener('click', (e) => {
         // add for loop here so I don't need to add a class and data-page that are the same for "projects" for example
-        
+
 
         if (e.target.matches('.conference-sand-table')) {
             e.preventDefault();
             loadPage('projects/conference-sand-table');
+        } else if (e.target.matches('.seesaw')) {
+            e.preventDefault();
+            loadPage('projects/seesaw');
         } else if (e.target.matches('.pde-seminar-link')) {
             e.preventDefault();
             loadPage('talks/pde-seminar');

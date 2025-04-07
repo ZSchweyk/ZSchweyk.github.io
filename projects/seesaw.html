@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeyn Schweyk - Seesaw</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_9b3r0tWN2PsELleDZwZpW1HZQKq8i1w9htTkU7ul1U9',{api_host:'https://app.posthog.com'})
+    </script>
+    <style>
+
+      .centered-text {
+        text-align: center;
+      }
+
+      .centered-img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+      }
+
+      .video-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .grid3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .grid4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        justify-items: center;
+      }
+
+      .grid2 iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-width: 300px;
+        max-height: 200px;
+        border: none;
+      }
+
+      .grid3 iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-width: 300px;
+        max-height: 200px;
+        border: none;
+      }
+
+      .grid4 iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-width: 300px;
+        max-height: 200px;
+        border: none;
+      }
+
+      /* 📱 Mobile: Stack videos vertically */
+      @media (max-width: 768px) {
+        .grid2 {
+          grid-template-columns: 1fr;
+        }
+
+        .grid3 {
+          grid-template-columns: 1fr;
+        }
+
+        .grid4 {
+          grid-template-columns: 1fr;
+        }
+
+        .grid2 iframe {
+          max-width: 100%;
+        }
+
+        .grid3 iframe {
+          max-width: 100%;
+        }
+
+        .grid4 iframe {
+          max-width: 100%;
+        }
+      }
+    </style>
+</head>
+<body>
+
+  <section id="seesaw">
+    <p><a href="#" class="projects" data-page="projects"><-Projects</a></p>
+
+    <h1 class="centered-text">Self Balancing Seesaw with Ping Pong Ball</h1>
+    <h2 class="centered-text">GitHub <a href="https://github.com/ZSchweyk/Seesaw_Balance_Code/tree/master" target="_blank">Repo</a></h2>
+
+    <div class="grid4">
+      <iframe src="https://www.youtube.com/embed/3Q0zSJi8XhU?si=4YC-dEJbqQevygZp" allowfullscreen></iframe>
+      <img src="img/seesaw/seesaw-front.webp" alt="" class="centered-img">
+      <img src="img/seesaw/seesaw-arduino.webp" alt="" class="centered-img">
+      <img src="img/seesaw/seesaw-lidar.webp" alt="" class="centered-img">
+    </div>
+
+    <p>
+      During my senior year of high school and between other larger projects, I put together the hardware and wrote the software to self-balance
+      a ping pong ball on a seesaw (from lazer cut acrylic). As the video and pictures above show, I wired up an Arduino Uno to a LIDAR sensor 
+      to track the position of the ping pong ball, and a servo motor to control/adjust the pitch of the seesaw. Although this project was relatively
+      simple, I found it to be very neat since it introduced me to controllers and PID loops, which only took around 150 lines of Arduino C/C++ code
+      to implement.
+    </p>
+
+    <p>
+      During my first couple days of working on this project, I experimented a lot with many different ping and sonar sensors.
+      Some sensors could not read as far as the length of the seesaw, while others were not accurate enough to approximate the position of the ball.
+      After a while, I found the VL53L0X Lidar, which has an accuracy within 3% of the true readings for distances up to 2 meters.
+      The last figure above shows this sensor attached to one end of the seesaw.
+      I made use of the Adafruit_VL53L0X.h library to read the LIDAR's distance measurements, and Arduino's built-in Servo library.
+      Once I got everyone wired up and verified I was able to succesfully communicate with the LIDAR and servo, I began learning
+      about basic PID controllers to solve similar control problems like this. I stumbled upon a great
+      <a href="https://youtube.com/playlist?list=PLn8PRpmsu08pQBgjxYFXSsODEF3Jqmm-y&si=YispQ38LoJB0YcaW">Matlab video series</a>
+      on PID control, and watched the entire playlist. However, I found the following videos to be the most helpful for this project...
+    </p>
+
+    <div class="grid4">
+      <iframe src="https://www.youtube.com/embed/wkfEZmsQqiA?si=wMK7veQU_ZmTP2-1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/NVLXCwc8HzM?si=RP7glhzTMO-NyM_9" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/7dUVdrs1e18?si=F2qMme6vBEe5TY2c" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/sFOEsA0Irjs?si=TkN7Na-Imk2sky-6" allowfullscreen></iframe>
+    </div>
+
+
+
+
+
+  </section>
+
+</body>
+</html>
