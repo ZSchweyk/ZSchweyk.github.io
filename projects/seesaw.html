@@ -152,6 +152,12 @@
       <iframe src="https://www.youtube.com/embed/sFOEsA0Irjs?si=TkN7Na-Imk2sky-6" allowfullscreen></iframe>
     </div>
 
+    <p>
+      I tuned the PID constants Kp, Ki, and Kd, manually until the results were decent. Something interesting I found was that once the ping pong ball
+      was centered and stationary, the servo would still make sharp angle adjustments to keep it centered. I fixed this by scaling my Kp, Ki, and Kd
+      constants down when the ball was centered and relatively stationary, and re-scaling the constants back up when the ball wasn't centered and stationary.
+    </p>
+
 
 
 
