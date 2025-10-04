@@ -63,3 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadPage('bio');
     setActiveLink(document.querySelector('.nav-link[data-page="bio"]'));
 });
+
+
+
