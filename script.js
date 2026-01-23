@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (e.target.matches(".projects")) {
             e.preventDefault();
             loadPage('projects');
+        } else if (e.target.matches(".compositions")) {
+            e.preventDefault();
+            loadPage('compositions');
         }
     });
 
